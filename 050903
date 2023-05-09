@@ -1,0 +1,38 @@
+root@shinjaesang-virtual-machine:~/linkdir# cd
+root@shinjaesang-virtual-machine:~# cd linkdir/
+root@shinjaesang-virtual-machine:~/linkdir# ln originalfile hardlink
+root@shinjaesang-virtual-machine:~/linkdir# ln -s originalfile softlink
+root@shinjaesang-virtual-machine:~/linkdir# ls -li
+합계 8
+529049 -rw-r--r-- 2 root root 47  5월  9 10:50 hardlink
+529049 -rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+529048 lrwxrwxrwx 1 root root 12  5월  9 11:08 softlink -> originalfile
+root@shinjaesang-virtual-machine:~/linkdir# ls -il
+합계 8
+529049 -rw-r--r-- 2 root root 47  5월  9 10:50 hardlink
+529049 -rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+529048 lrwxrwxrwx 1 root root 12  5월  9 11:08 softlink -> originalfile
+root@shinjaesang-virtual-machine:~/linkdir# cat hardlink
+링크시킬 원본 파일을 작성합니다.
+root@shinjaesang-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@shinjaesang-virtual-machine:~/linkdir# mv originalfile ../
+root@shinjaesang-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@shinjaesang-virtual-machine:~/linkdir# cat hardlink
+링크시킬 원본 파일을 작성합니다.
+root@shinjaesang-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~/linkdir# cd
+root@shinjaesang-virtual-machine:~# ls -li originalfile
+529049 -rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+root@shinjaesang-virtual-machine:~# mv originalfile ./linkdir
+root@shinjaesang-virtual-machine:~# cd  linkdir
+root@shinjaesang-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@shinjaesang-virtual-machine:~/linkdir# cat softlink
+링크시킬 원본 파일을 작성합니다.
+root@shinjaesang-virtual-machine:~/linkdir# tlqkf
+tlqkf: 명령을 찾을 수 없습니다
+root@shinjaesang-virtual-machine:~/linkdir# 
+
