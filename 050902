@@ -1,0 +1,110 @@
+root@shinjaesang-virtual-machine:~# tail /etc/shadow
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+shinjaesang:$y$j9T$zSU0qhknHuoPdYCPoTwgw1$.5S2XB80m0xCo6zg2nuCzu1CZRnoK55vq0xMBiKebp4:19430:0:99999:7:::
+poly1:$y$j9T$uH8UZNd1C2Jd8xGZ9nQKP/$YR26SfdEJyIagENuOm7vO.OjxrWzsqdIRFcFphpnYxC:19479:30:30:10::20818:
+poly2:$y$j9T$/A6c/uRT7eYfXClMxMQjB.$h.TIy2GDtMHjqaCdYSkX9HHYP.OHJBbYUy0/dKaTBm/:19479:0:99999:7:::
+poyl3:$y$j9T$qosnoElb5uA7w4EPZ9v5z1$mduHV8L8fmjo89gBg88j9YmEkxR9ILogotWHD9DywD0:19479:0:99999:7:::
+poly4:$y$j9T$KoNMV5N8VuYKA0hcOycUw/$tcZm/i9vMSOdIUKq94PkdzzMDzvcgOjwZLQwGsBwjq/:19479:0:99999:7:::
+hanbit1:$y$j9T$SoFUphXyY7z816Ce/At6F/$d.dALHJC2biFpufgDcp1gdjFGc2S6Ctz1ysPaohvNj9:19479:0:99999:7:::
+hanbit2:$y$j9T$ZJt0cMIgxsj2taMb6rMsG0$I/AbhQGtLnWnlLKA6rPTVO2yvAFac4/qeNXQX30qYM6:19479:0:99999:7:::
+root@shinjaesang-virtual-machine:~# chown poly1 mydata.txt
+root@shinjaesang-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly1 root 0  5월  9 09:26 mydata.txt
+root@shinjaesang-virtual-machine:~# chown poly2.poly2 mydata.txt
+root@shinjaesang-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 poly2 0  5월  9 09:26 mydata.txt
+root@shinjaesang-virtual-machine:~# chgrp poly3 mydata.txt
+chgrp: 잘못된 그룹: `poly3'
+root@shinjaesang-virtual-machine:~# chgrp root mydata.txt
+root@shinjaesang-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 root 0  5월  9 09:26 mydata.txt
+root@shinjaesang-virtual-machine:~# nano sample
+root@shinjaesang-virtual-machine:~# cat sample
+리눅스 명령 연습중
+파일 허가권과 소유권에 대한 명령 실습중
+ls /var
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rw-r--r-- 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chmod u+x sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@shinjaesang-virtual-machine:~# ./sample
+./sample: 줄 1: 리눅스: 명령어를 찾을 수 없음
+./sample: 줄 2: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chown poly1 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 poly1 root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chown poly1.poly1 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 poly1 poly1 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chmod 754 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 poly1 poly1 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chown root.root sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chmod 777 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxrwxrwx 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chmod 754 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 root root 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# chown poly1.poly1 sample
+root@shinjaesang-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 poly1 poly1 92  5월  9 10:15 sample
+root@shinjaesang-virtual-machine:~# su - poly1
+su: failed to execute /bin/csh: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# su - shinjaesang
+shinjaesang@shinjaesang-virtual-machine:~$ pwd
+/home/shinjaesang
+shinjaesang@shinjaesang-virtual-machine:~$ ls -l /root/sample
+ls: '/root/sample'에 접근할 수 없음: 허가 거부
+shinjaesang@shinjaesang-virtual-machine:~$ ls -ld /root
+drwx------ 17 root root 4096  5월  9 10:15 /root
+shinjaesang@shinjaesang-virtual-machine:~$ logout
+root@shinjaesang-virtual-machine:~# mv sample ~shinjaesang
+root@shinjaesang-virtual-machine:~# ls -l sampele
+ls: 'sampele'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# su - shinjaesang
+shinjaesang@shinjaesang-virtual-machine:~$ ls -ld /root
+drwx------ 17 root root 4096  5월  9 10:39 /root
+shinjaesang@shinjaesang-virtual-machine:~$ ls -l sample
+-rwxr-xr-- 1 poly1 poly1 92  5월  9 10:15 sample
+shinjaesang@shinjaesang-virtual-machine:~$ ls -ld /shinjaesang
+ls: '/shinjaesang'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+shinjaesang@shinjaesang-virtual-machine:~$ chmod 777 sample
+chmod: 'sample'의 권한 바꾸는 중: 명령을 허용하지 않음
+shinjaesang@shinjaesang-virtual-machine:~$ ls -l sample
+-rwxr-xr-- 1 poly1 poly1 92  5월  9 10:15 sample
+shinjaesang@shinjaesang-virtual-machine:~$ chmod 777 sample
+chmod: 'sample'의 권한 바꾸는 중: 명령을 허용하지 않음
+shinjaesang@shinjaesang-virtual-machine:~$ chmod 777 sample
+chmod: 'sample'의 권한 바꾸는 중: 명령을 허용하지 않음
+shinjaesang@shinjaesang-virtual-machine:~$ logout
+root@shinjaesang-virtual-machine:~# chown root.root sample
+chown: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# mv sample ~root
+mv: 'sample' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# su - shinjaesang
+shinjaesang@shinjaesang-virtual-machine:~$ mv sample ~root
+mv: '/root/sample' 상태 정보 확인 불가: 허가 거부
+shinjaesang@shinjaesang-virtual-machine:~$ chmod 777 sample
+chmod: 'sample'의 권한 바꾸는 중: 명령을 허용하지 않음
+shinjaesang@shinjaesang-virtual-machine:~$ logout
+root@shinjaesang-virtual-machine:~# cd
+root@shinjaesang-virtual-machine:~# mkdir linkdir
+root@shinjaesang-virtual-machine:~# cd linkdir/
+root@shinjaesang-virtual-machine:~/linkdir# nano originalfile
+root@shinjaesang-virtual-machine:~/linkdir# cat originalfile
+링크시킬 원본 파일을 작성합니다.
+root@shinjaesang-virtual-machine:~/linkdir# 
+
