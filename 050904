@@ -1,0 +1,15 @@
+root@shinjaesang-virtual-machine:~/linkdir# cd
+root@shinjaesang-virtual-machine:~# yes > /dev/null
+죽었음
+root@shinjaesang-virtual-machine:~# ^C
+root@shinjaesang-virtual-machine:~# 
+
+---------------------------------------------------------------------
+
+root@shinjaesang-virtual-machine:~/바탕화면# cd
+root@shinjaesang-virtual-machine:~# ps  -ef | grep yes
+root        3062    1976 99 11:36 pts/0    00:05:18 yes
+root        3084    3074  0 11:41 pts/1    00:00:00 grep --color=auto yes
+root@shinjaesang-virtual-machine:~# kill -9 3062
+root@shinjaesang-virtual-machine:~# 
+
