@@ -1,0 +1,163 @@
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					: 안함
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 0
+암호를 바꿔야 하는 최대 날 수		: 99999
+암호 만료 예고를 하는 날 수		: 7
+root@shinjaesang-virtual-machine:~# chage -m 30 poly1
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					: 안함
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 99999
+암호 만료 예고를 하는 날 수		: 7
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					: 안함
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 99999
+암호 만료 예고를 하는 날 수		: 7
+root@shinjaesang-virtual-machine:~# chage -M 30 poly1
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 7
+root@shinjaesang-virtual-machine:~# chage -E 2026/12/31 poly1
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 12월 31, 2026
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 7
+root@shinjaesang-virtual-machine:~# chage -W 10 poly1
+root@shinjaesang-virtual-machine:~# chage -l poly1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 12월 31, 2026
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 10
+root@shinjaesang-virtual-machine:~# groups
+root
+root@shinjaesang-virtual-machine:~# groups poly3
+groups: `poly3': 이 사용자는 없습니다
+root@shinjaesang-virtual-machine:~# groupadd newgroup1
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# groupadd --gid 2222 newgroup2
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# groupmod --new-name mygroup1 newgroup1
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# groupdel newgroup2
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# gpasswd mygroup1
+mygroup1 그룹의 암호를 바꾸는 중
+새 암호: 
+새 암호를 다시 입력하십시오: 
+입력값이 일치하지 않습니다. 다시 시도하십시오
+새 암호: 
+새 암호를 다시 입력하십시오: 
+입력값이 일치하지 않습니다. 다시 시도하십시오
+새 암호: 
+새 암호를 다시 입력하십시오: 
+root@shinjaesang-virtual-machine:~# gpasswd -a poly1 mygroup1
+사용자 poly1을(를) mygroup1 그룹에 등록 중
+root@shinjaesang-virtual-machine:~# gpasswd -a poly4 mygroup1
+사용자 poly4을(를) mygroup1 그룹에 등록 중
+root@shinjaesang-virtual-machine:~# gpasswd -A poly1 mygroup1
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# gpasswd -d poly4 mygroup1
+사용자 poly4을(를) 그룹 mygroup1에서 제거하는 중
+root@shinjaesang-virtual-machine:~# adduser hanbit1
+'hanbit1' 사용자를 추가 중...
+새 그룹 'hanbit1' (1003) 추가 ...
+새 사용자 'hanbit1' (1004) 을(를) 그룹 'hanbit1' (으)로 추가 ...
+'/home/hanbit1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shinjaesang:x:1000:1000:shinjaesang,,,:/home/shinjaesang:/bin/bash
+poly1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/poly1:/bin/csh
+poly2:x:1111:1111:,,,:/home/poly2:/bin/bash
+poyl3:x:1002:1000:,,,:/home/poyl3:/bin/bash
+poly4:x:1003:1002:,,,:/newhome:/bin/bash
+hanbit1:x:1004:1003:,,,:/home/hanbit1:/bin/bash
+root@shinjaesang-virtual-machine:~# tail /etc/group
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:shinjaesang
+shinjaesang:x:1000:poly1
+sambashare:x:136:shinjaesang
+poly1:x:1001:
+poly2:x:1111:
+poly4:x:1002:
+mygroup1:x:1112:poly1
+hanbit1:x:1003:
+root@shinjaesang-virtual-machine:~# groupadd ubuntu
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# gpasswd -a hanbit1 ubuntu
+사용자 hanbit1을(를) ubuntu 그룹에 등록 중
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# adduser --gid 1113 hanbit2
+'hanbit2' 사용자를 추가 중...
+새 사용자 'hanbit2' (1005) 을(를) 그룹 'ubuntu' (으)로 추가 ...
+'/home/hanbit2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# adduser --gid 1113 hanbit2
+adduser: 'hanbit2' 사용자는 이미 존재합니다.
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# tail -5 /etc/passwd
+poly2:x:1111:1111:,,,:/home/poly2:/bin/bash
+poyl3:x:1002:1000:,,,:/home/poyl3:/bin/bash
+poly4:x:1003:1002:,,,:/newhome:/bin/bash
+hanbit1:x:1004:1003:,,,:/home/hanbit1:/bin/bash
+hanbit2:x:1005:1113:,,,:/home/hanbit2:/bin/bash
+root@shinjaesang-virtual-machine:~# ^C
+root@shinjaesang-virtual-machine:~# 
+

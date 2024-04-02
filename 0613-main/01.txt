@@ -1,0 +1,399 @@
+root@shinjaesang-virtual-machine:~# apt-get -y install dconf-editor
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음 새 패키지를 설치할 것입니다:
+  dconf-editor
+0개 업그레이드, 1개 새로 설치, 0개 제거 및 9개 업그레이드 안 함.
+390 k바이트 아카이브를 받아야 합니다.
+이 작업 후 2,100 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/universe amd64 dconf-editor amd64 3.28.0-1 [390 kB]
+내려받기 390 k바이트, 소요시간 0초 (2,135 k바이트/초)
+Selecting previously unselected package dconf-editor.
+(데이터베이스 읽는중 ...현재 205529개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../dconf-editor_3.28.0-1_amd64.deb ...
+Unpacking dconf-editor (3.28.0-1) ...
+dconf-editor (3.28.0-1) 설정하는 중입니다 ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for libglib2.0-0:amd64 (2.72.4-0ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+root@shinjaesang-virtual-machine:~# deconf-editor
+명령어 'deconf-editor' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb dconf-editordconf-editor의 명령어 ' (3.38.3-3)'
+Try: apt install <deb name>
+root@shinjaesang-virtual-machine:~# dconf-editor
+
+** (dconf-editor:2800): WARNING **: 09:39:38.023: source-manager.vala:98: Schema with id “org.gnome.desktop.remote-desktop” contains neither keys nor children.
+root@shinjaesang-virtual-machine:~# ufw allow 5900/tcp
+규칙이 추가되었습니다
+규칙이 추가되었습니다 (v6)
+root@shinjaesang-virtual-machine:~# ifconfig
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.112.128  netmask 255.255.255.0  broadcast 192.168.112.255
+        inet6 fe80::cd7e:b306:c6a0:78e9  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:58:47:de  txqueuelen 1000  (Ethernet)
+        RX packets 116500  bytes 174572488 (174.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8527  bytes 564960 (564.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 188  bytes 17549 (17.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 188  bytes 17549 (17.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@shinjaesang-virtual-machine:~# dpkg apache2
+dpkg: 오류: 명령 옵션이 필요합니다
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+root@shinjaesang-virtual-machine:~# dpkg -i apache2
+dpkg: 오류: cannot access archive 'apache2': 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# dpkg -l apache2
+dpkg-query: apache2와 일치하는 패키지를 찾지 못했습니다
+root@shinjaesang-virtual-machine:~# apt-get -y install apache2
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+제안하는 패키지:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom gdbm-l10n
+다음 새 패키지를 설치할 것입니다:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+0개 업그레이드, 21개 새로 설치, 0개 제거 및 9개 업그레이드 안 함.
+4,003 k바이트 아카이브를 받아야 합니다.
+이 작업 후 14.5 M바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+받기:2 http://mirror.kakao.com/ubuntu bionic/main amd64 libgdbm5 amd64 1.14.1-6 [26.0 kB]
+받기:3 http://mirror.kakao.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+오류:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.1-1ubuntu2.1~18.04.22
+  404  Not Found [IP: 91.189.91.38 80]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1 amd64 1.6.1-2ubuntu0.1 [84.6 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2ubuntu0.1 [10.6 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libroken18-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [42.3 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasn1-8-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [175 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libheimbase1-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [30.3 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libhcrypto4-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [85.9 kB]
+받기:11 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libwind0-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [48.0 kB]
+받기:12 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libhx509-5-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [107 kB]
+받기:13 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-26-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [207 kB]
+받기:14 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libheimntlm0-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [14.8 kB]
+받기:15 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi3-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [96.7 kB]
+받기:16 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.11 [154 kB]
+받기:17 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1-ldap amd64 1.6.1-2ubuntu0.1 [8,752 B]
+받기:18 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.27 [1,071 kB]
+받기:19 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.27 [83.3 kB]
+받기:20 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.27 [160 kB]
+받기:21 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.27 [95.1 kB]
+내려받기 2,699 k바이트, 소요시간 6초 (428 k바이트/초)                          
+E: http://kr.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1-1ubuntu2.1%7e18.04.22_amd64.deb 파일을 받는데 실패했습니다  404  Not Found [IP: 91.189.91.38 80]
+E: 아카이브를 받을 수 없습니다. 아마도 apt-get update를 실행해야 하거나 --fix-missing 옵션을 줘서 실행해야 할 것입니다.
+root@shinjaesang-virtual-machine:~# apt-get update
+기존:1 http://mirror.kakao.com/ubuntu bionic InRelease 
+받기:2 https://dl.google.com/linux/chrome/deb stable InRelease [1,825 B]       
+받기:3 https://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,080 B]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3,032 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [1,661 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [552 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [297 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [1,662 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1,910 kB]
+받기:11 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [420 kB]
+받기:12 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [304 kB]
+받기:13 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+받기:14 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1,332 kB]
+받기:15 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [185 kB]
+내려받기 11.4 M바이트, 소요시간 11초 (1,000 k바이트/초)                        
+패키지 목록을 읽는 중입니다... 완료
+W: http://ftp.daumkakao.com/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://kr.archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+root@shinjaesang-virtual-machine:~# apt-get -y install apache2
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+제안하는 패키지:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom gdbm-l10n
+다음 새 패키지를 설치할 것입니다:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+0개 업그레이드, 21개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+1,303 k바이트/4,002 k바이트 아카이브를 받아야 합니다.
+이 작업 후 14.5 M바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.1-1ubuntu2.1~18.04.23 [1,303 kB]
+내려받기 1,303 k바이트, 소요시간 3초 (395 k바이트/초)                   
+패키지를 미리 설정하는 중입니다...
+Selecting previously unselected package libapr1:amd64.
+(데이터베이스 읽는중 ...현재 205619개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../00-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libgdbm5:amd64.
+Preparing to unpack .../01-libgdbm5_1.14.1-6_amd64.deb ...
+Unpacking libgdbm5:amd64 (1.14.1-6) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../02-libssl1.1_1.1.1-1ubuntu2.1~18.04.23_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.23) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../03-libaprutil1_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../04-libaprutil1-dbd-sqlite3_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../05-libroken18-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../06-libasn1-8-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../07-libheimbase1-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../08-libhcrypto4-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../09-libwind0-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../10-libhx509-5-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../11-libkrb5-26-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../12-libheimntlm0-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../13-libgssapi3-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../14-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.11_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.11) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../15-libaprutil1-ldap_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../16-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../17-apache2-bin_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../18-apache2-utils_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../19-apache2-data_2.4.29-1ubuntu4.27_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../20-apache2_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.27) ...
+libgdbm5:amd64 (1.14.1-6) 설정하는 중입니다 ...
+libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.23) 설정하는 중입니다 ...
+libapr1:amd64 (1.6.3-2) 설정하는 중입니다 ...
+libroken18-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+liblua5.2-0:amd64 (5.2.4-1.1build1) 설정하는 중입니다 ...
+apache2-data (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+libheimbase1-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libaprutil1:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+libasn1-8-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libaprutil1-dbd-sqlite3:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libwind0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+apache2-utils (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+libhx509-5-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libgssapi3-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.11) 설정하는 중입니다 ...
+libaprutil1-ldap:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+apache2-bin (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+apache2 (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.1-4build1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+root@shinjaesang-virtual-machine:~# dpkg -l apache2
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전               Architecture 설명
++++-==============-==================-============-============================>
+ii  apache2        2.4.29-1ubuntu4.27 amd64        Apache HTTP Server
+root@shinjaesang-virtual-machine:~# systemctl restart apache2
+root@shinjaesang-virtual-machine:~# systemctl enable apache2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+root@shinjaesang-virtual-machine:~# systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-13 10:30:01 KST; 30s ago
+   Main PID: 4459 (apache2)
+      Tasks: 55 (limit: 4573)
+     Memory: 5.2M
+        CPU: 29ms
+     CGroup: /system.slice/apache2.service
+             ├─4459 /usr/sbin/apache2 -k start
+             ├─4460 /usr/sbin/apache2 -k start
+             └─4461 /usr/sbin/apache2 -k start
+
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Starting The Apache HT>
+ 6월 13 10:30:01 shinjaesang-virtual-machine apachectl[4457]: AH00558: apache2:>
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Started The Apache HTT>
+...skipping...
+~
+~
+~
+~
+~
+~
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-13 10:30:01 KST; 30s ago
+   Main PID: 4459 (apache2)
+      Tasks: 55 (limit: 4573)
+     Memory: 5.2M
+        CPU: 29ms
+     CGroup: /system.slice/apache2.service
+             ├─4459 /usr/sbin/apache2 -k start
+             ├─4460 /usr/sbin/apache2 -k start
+             └─4461 /usr/sbin/apache2 -k start
+
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Starting The Apache HT>
+ 6월 13 10:30:01 shinjaesang-virtual-machine apachectl[4457]: AH00558: apache2:>
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Started The Apache HTT>
+...skipping...
+~
+~
+~
+~
+~
+~
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-13 10:30:01 KST; 30s ago
+   Main PID: 4459 (apache2)
+      Tasks: 55 (limit: 4573)
+     Memory: 5.2M
+        CPU: 29ms
+     CGroup: /system.slice/apache2.service
+             ├─4459 /usr/sbin/apache2 -k start
+             ├─4460 /usr/sbin/apache2 -k start
+             └─4461 /usr/sbin/apache2 -k start
+
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Starting The Apache HT>
+ 6월 13 10:30:01 shinjaesang-virtual-machine apachectl[4457]: AH00558: apache2:>
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Started The Apache HTT>
+...skipping...
+~
+~
+~
+~
+~
+~
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-13 10:30:01 KST; 30s ago
+   Main PID: 4459 (apache2)
+      Tasks: 55 (limit: 4573)
+     Memory: 5.2M
+        CPU: 29ms
+     CGroup: /system.slice/apache2.service
+             ├─4459 /usr/sbin/apache2 -k start
+             ├─4460 /usr/sbin/apache2 -k start
+             └─4461 /usr/sbin/apache2 -k start
+
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Starting The Apache HT>
+ 6월 13 10:30:01 shinjaesang-virtual-machine apachectl[4457]: AH00558: apache2:>
+ 6월 13 10:30:01 shinjaesang-virtual-machine systemd[1]: Started The Apache HTT>
+~
+root@shinjaesang-virtual-machine:~# cd /var/www/html#
+bash: cd: /var/www/html#: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# cd /var/www/html# nano index.html
+bash: cd: 인자가 너무 많음
+root@shinjaesang-virtual-machine:~# cd /var/www/html
+root@shinjaesang-virtual-machine:/var/www/html# ls
+index.html
+root@shinjaesang-virtual-machine:/var/www/html# nano index.html
+root@shinjaesang-virtual-machine:/var/www/html# ifconfig
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.112.128  netmask 255.255.255.0  broadcast 192.168.112.255
+        inet6 fe80::cd7e:b306:c6a0:78e9  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:58:47:de  txqueuelen 1000  (Ethernet)
+        RX packets 144951  bytes 210009724 (210.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 17615  bytes 1410784 (1.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1056  bytes 103795 (103.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1056  bytes 103795 (103.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

@@ -1,0 +1,356 @@
+root@shinjaesang-virtual-machine:~# nano /etc/passwd
+root@shinjaesang-virtual-machine:~# nano /etc/shadow
+root@shinjaesang-virtual-machine:~# nano /etc/passwd
+root@shinjaesang-virtual-machine:~# nano /etc/group
+root@shinjaesang-virtual-machine:~# adduser
+adduser: 하나 혹은 두 개의 이름만 지정할 수 있습니다.
+root@shinjaesang-virtual-machine:~# adduser poly1
+'poly1' 사용자를 추가 중...
+새 그룹 'poly1' (1001) 추가 ...
+새 사용자 'poly1' (1001) 을(를) 그룹 'poly1' (으)로 추가 ...
+'/home/poly1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: Polytech1
+	방 번호 []: 509
+	직장 전화번호 []: 02-333-5555
+	집 전화번호 []: 02-777-7777
+	기타 []: Student
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# nano /etc/passwd
+root@shinjaesang-virtual-machine:~# adduser --uid 1111 poly2
+'poly2' 사용자를 추가 중...
+새 그룹 'poly2' (1111) 추가 ...
+새 사용자 'poly2' (1111) 을(를) 그룹 'poly2' (으)로 추가 ...
+'/home/poly2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# adduser --gid 1000 poyl3
+'poyl3' 사용자를 추가 중...
+새 사용자 'poyl3' (1002) 을(를) 그룹 'shinjaesang' (으)로 추가 ...
+'/home/poyl3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poyl3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# tail /etc/passwd
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shinjaesang:x:1000:1000:shinjaesang,,,:/home/shinjaesang:/bin/bash
+poly1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/poly1:/bin/bash
+poly2:x:1111:1111:,,,:/home/poly2:/bin/bash
+poyl3:x:1002:1000:,,,:/home/poyl3:/bin/bash
+root@shinjaesang-virtual-machine:~# adduser --home /newhome poly4
+'poly4' 사용자를 추가 중...
+새 그룹 'poly4' (1002) 추가 ...
+새 사용자 'poly4' (1003) 을(를) 그룹 'poly4' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shinjaesang:x:1000:1000:shinjaesang,,,:/home/shinjaesang:/bin/bash
+poly1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/poly1:/bin/bash
+poly2:x:1111:1111:,,,:/home/poly2:/bin/bash
+poyl3:x:1002:1000:,,,:/home/poyl3:/bin/bash
+poly4:x:1003:1002:,,,:/newhome:/bin/bash
+root@shinjaesang-virtual-machine:~# login
+shinjaesang-virtual-machine 로그인: poly4
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly4@shinjaesang-virtual-machine:~$ logout
+root@shinjaesang-virtual-machine:~# login
+shinjaesang-virtual-machine 로그인: poly3
+암호: 
+12  
+로그인이 맞지 않습니다
+shinjaesang-virtual-machine 로그인: poly4
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+마지막 로그인: 화  5월  2 10:17:13 KST 2023 일시 pts/0
+poly4@shinjaesang-virtual-machine:~$ exit
+로그아웃
+root@shinjaesang-virtual-machine:~# adduser --shell /bin/csh poly5
+'poly5' 사용자를 추가 중...
+새 그룹 'poly5' (1003) 추가 ...
+새 사용자 'poly5' (1004) 을(를) 그룹 'poly5' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/csh'
+'/home/poly5' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly5의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@shinjaesang-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shinjaesang:x:1000:1000:shinjaesang,,,:/home/shinjaesang:/bin/bash
+poly1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/poly1:/bin/bash
+poly2:x:1111:1111:,,,:/home/poly2:/bin/bash
+poyl3:x:1002:1000:,,,:/home/poyl3:/bin/bash
+poly4:x:1003:1002:,,,:/newhome:/bin/bash
+poly5:x:1004:1003:,,,:/home/poly5:/bin/csh
+root@shinjaesang-virtual-machine:~# login
+shinjaesang-virtual-machine 로그인: poly5
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+/bin/csh을(를) 실행할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+root@shinjaesang-virtual-machine:~# paddwd poly1
+paddwd: 명령을 찾을 수 없습니다
+root@shinjaesang-virtual-machine:~# passwd poly1
+새 암호: 
+잘못된 비밀번호: 암호가 앞뒤 어느쪽에서 읽어도 같은 문맥입니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@shinjaesang-virtual-machine:~# login poly1
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly1@shinjaesang-virtual-machine:~$ exit
+로그아웃
+root@shinjaesang-virtual-machine:~# usermod --shell/bin/csh poly1
+usermod: 인식할 수 없는 옵션 '--shell/bin/csh'
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+root@shinjaesang-virtual-machine:~# usermod --shell /bin/csh poly1
+root@shinjaesang-virtual-machine:~# usermod --gruops shinjaesang poly1
+usermod: 인식할 수 없는 옵션 '--gruops'
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+root@shinjaesang-virtual-machine:~# usermod --groups shinjaesang poly1
+root@shinjaesang-virtual-machine:~# nano /etc/passwd
+root@shinjaesang-virtual-machine:~# ls /home
+poly1  poly2  poly5  poyl3  shinjaesang  t2.txt  t3.txt
+root@shinjaesang-virtual-machine:~# ls /
+apple  cdrom  home   lib64       media  newhome  root  snap      sys        tmp
+bin    dev    lib    libx32      melon  opt      run   srv       test1.txt  usr
+boot   etc    lib32  lost+found  mnt    proc     sbin  swapfile  test2.txt  var
+root@shinjaesang-virtual-machine:~# userdel -r poly5
+userdel: poly5 mail spool (/var/mail/poly5) not found
+root@shinjaesang-virtual-machine:~# nano /etc/passwd
+root@shinjaesang-virtual-machine:~# 
